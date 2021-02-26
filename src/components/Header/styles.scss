@@ -1,0 +1,157 @@
+@import "../../common.scss";
+@import "../../mixin.scss";
+
+.container {
+  background-color: $black;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  min-width: 250px !important;
+}
+.leftMenu {
+  display: flex;
+  flex-direction: row;
+  width: 30% !important;
+  justify-content: flex-start;
+  align-items: center;
+
+  .hiddenIconsContainer {
+    display: none;
+  }
+  .hero {
+    width: 35px;
+    height: 35px;
+  }
+  p {
+    color: $white;
+    font-size: 1vw;
+    font-weight: 600;
+    padding-left: 25px;
+  }
+  p:hover {
+    color: $purple;
+    cursor: pointer;
+  }
+}
+.searchContainer {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .searchButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+  }
+
+  .searchInput {
+    width: 20vw;
+    height: 40px;
+    background-color: $input-grey;
+    border-radius: 8px 0px 0px 8px;
+    text-indent: 10px;
+    color: $white;
+  }
+  .searchInput:focus {
+    background-color: $black !important;
+    border: 2px solid $purple !important;
+  }
+  .searchIcon {
+    color: $light-grey;
+  }
+  .searchButton {
+    background-color: $input-button-grey;
+    width: 40px;
+    height: 40px;
+    border-radius: 0px 8px 8px 0px;
+  }
+  ::placeholder {
+    font-weight: 800;
+    color: $light-grey;
+  }
+}
+.rightMenuContainer {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .rightMenuGroup {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .rightMenuIcons {
+    color: $white;
+    height: 20px;
+    width: 20px;
+  }
+  .rightMenuButton {
+    width: 125px;
+    height: 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    background-color: $input-button-grey;
+    color: $white;
+  }
+  .rightMenuUserIcon {
+    color: palevioletred;
+    width: 30px;
+    height: 30px;
+  }
+  .searchIconHidden {
+    display: none;
+    color: $white;
+  }
+}
+@media (max-width: 1100px) {
+  .leftMenu {
+    p {
+      font-size: 12px !important;
+    }
+  }
+  .rightMenuButton {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .leftMenu {
+    width: 40% !important;
+    p {
+      display: none;
+    }
+    .hiddenIconsContainer {
+      display: flex;
+      width: 100%;
+      color: $white;
+      justify-content: space-around;
+    }
+  }
+  .rightMenuContainer {
+    width: 60%;
+  }
+  .searchContainer {
+    display: none;
+    .searchButton {
+      display: none;
+    }
+  }
+  .searchIconHidden {
+    display: flex !important;
+  }
+}
+@media (max-width: 400px) {
+  .leftMenu {
+    width: 50% !important;
+  }
+  .rightMenuContainer {
+    width: 50%;
+    .rightMenuGroup {
+      width: 100% !important;
+      justify-content: space-around;
+    }
+  }
+}
