@@ -1,0 +1,77 @@
+@import "../../common.scss";
+
+.sideBarContainer {
+  background-color: $mid-grey;
+  padding-top: 55px;
+  width: 13vw;
+  height: 100vh;
+  top: 50px;
+
+  .sideBarGroup {
+    padding: 10px 0px 0px 10px;
+  }
+  h2 {
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap;
+    font-weight: 400;
+  }
+  .followedChannels {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100% !important;
+  }
+  .buttonHideShow {
+    background-color: transparent;
+  }
+  .sideBarHideShowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sideBarHideShowIcon {
+      color: $white;
+    }
+  }
+  .sideBarChannelContainer {
+    display: flex;
+    align-items: center;
+    .channelPhoto {
+      height: 50px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .photo {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+    .channelTitles {
+      h1 {
+        font-size: 14px;
+        list-style: 13px;
+        color: #cac5c2;
+      }
+      span {
+        font-size: 13px;
+        line-height: 16px;
+        color: #cac5c2;
+      }
+    }
+  }
+  .sideBarViewNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: $white;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  .offlinePhoto {
+    filter: grayscale(20);
+  }
+}

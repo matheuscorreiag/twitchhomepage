@@ -1,12 +1,14 @@
-import React from 'react';
-import Header from '../../components/Header';
+import React from "react";
+import Header from "../../components/Header";
+import Sidebar from "../../components/Sidebar";
 
-import './styles.scss';
+import "./styles.scss";
 
 const Landing: React.FC = () => {
   return (
     <>
       <Header />
+      <Sidebar />
     </>
   );
 };

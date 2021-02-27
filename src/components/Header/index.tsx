@@ -10,7 +10,7 @@ import {
   SportsEsports,
   MusicNote,
 } from "@material-ui/icons";
-import hero from "../../images/twitch-icon.svg";
+import hero from "../../images/twitch.png";
 import "./styles.scss";
 
 const Header: React.FC = () => {
